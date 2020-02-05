@@ -1,1 +1,1 @@
-# static-vue-app
+STATIC-VUE-APP
