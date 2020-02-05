@@ -1,50 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
-</head>
-<body>
-  <div id="app">
-    <h1>HELLO UNIVERSE: {{m1}}</h1>
-    <h2>Attempting to call something</h2>
-    <h3> {{info}}</h3>
-    <!-- <v-app>
-      <v-content>
-          <v-card
-          class="mx-auto"
-          max-width="344"
-        >
-          <v-card-text>
-            <div>Word of the Day</div>
-            <p class="display-1 text--primary">
-              be•nev•o•lent
-            </p>
-            <p>adjective</p>
-            <div class="text--primary">
-              well meaning and kindly.<br>
-              "a benevolent smile"
-            </div>
-          </v-card-text>
-          <v-card-actions>
-            <v-btn
-              text
-              color="deep-purple accent-4"
-            >
-              {{m1}}
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-content>
-    </v-app> -->
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  <script src="./App.js"></script>
-</body>
+  <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  </head>
+  <body>
+    <div id="app">
+      <h1>HELLO UNIVERSE: {{m1}}</h1>
+      <h2>Attempting to call something</h2>
+      <!--<h3> {{info}}</h3>-->
+      Repo name: <input type="text" v-model="name">
+      <button v-on:click="myClickHandler"> Do SOMETHING</button>
+      <h4>more info below</h4>
+      <h4>{{more_info}}</h4>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="./App.js"></script>
+  </body>
 </html>
