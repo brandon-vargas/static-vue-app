@@ -8,12 +8,12 @@
   </head>
   <body>
     <div id="app">
-      <h1>HELLO UNIVERSE: {{m1}}</h1>
-      <h2>Attempting to call something</h2>
+      <!--<h1>HELLO UNIVERSE: {{m1}}</h1>-->
+      <!--<h2>Attempting to call something</h2>-->
       <!--<h3> {{info}}</h3>-->
-      Repo name: <input type="text" v-model="name">
+      <!--Repo name: <input type="text" v-model="name">-->
       <!--<button v-on:click="myClickHandler"> Do SOMETHING</button>-->
-      <h4>more info below</h4>
+      <!--<h4>more info below</h4>-->
       <!--<h4>{{more_info}}</h4>-->
       <v-form>
         <v-container>
@@ -46,15 +46,17 @@
           class="mx-auto"
           max-width="344">
           <v-card-text>
-            <h3>{{more_info}}</h3>
+            <h3 v-model="more_info">{{more_info}}</h3>
           </v-card-text>
         </v-card>
     </div>
   
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
     <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.0.0/fetch.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     <script src="./App.js"></script>
   </body>
 </html>
