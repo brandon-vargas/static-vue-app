@@ -20,25 +20,28 @@ new Vue({
         var url = 'https://api.github.com/user'
         
         var headers = []
-        headers['Accept'] = 'application/vnd.github.inertia-preview+json';
+				headers['Accept'] = 'application/vnd.github.inertia-preview+json';
         
         var authdata = this.base64_encode(this.user + ':' + this.pass);
-        headers['Authorization'] = 'Basic ' + authdata;
-  			
-        $.ajaxSetup({
-            headers : headers
-        });
-    
-        $.ajax({
-            type: 'GET',
-            url: url,
-            success: function(response, status, request){
-                alert('i am successful!');
-                this.more_info = response;
-                console.log(response)
-            }
-        });
+				headers['Authorization'] = 'Basic ' + authdata;
+  			console.log('1 = ' + this.more_info)
+  			$.ajaxSetup({
+  				headers : headers
+  			});
         
+    		$.ajax({
+    			type: 'GET',
+    			url: url,
+    			success: function(response, status, request){
+
+                    console.log('i am successful request!');
+                    console.log(response)
+                    this.more_info = response;
+                
+                }.bind(this)
+  			});
+
+  			console.log('3 = ' + this.more_info)
         },
         base64_encode: function (input) {
       		var _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
