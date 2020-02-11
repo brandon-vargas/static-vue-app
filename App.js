@@ -39,12 +39,14 @@ new Vue({
 
                     console.log('i am successful request!');
                     console.log(response)
-                    this.more_info = JSON.parse(response);
+//                     this.more_info = JSON.parse(response);
+		    this.more_info = response;
                 
                 }.bind(this)
   			});
 
-  			console.log('3 = ' + this.more_info)
+  			console.log('3 = ' + this.more_info);
+			console.log('4 = ' + this.more_info[0]);
         },
         base64_encode: function (input) {
       		var _keyStr = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
