@@ -1,7 +1,5 @@
 var some_text = "I AM SOME TEXT, YES.";
 
-
-
 new Vue({
     el: '#app',
     data: {
@@ -11,20 +9,25 @@ new Vue({
       name: 'idksomename',
       user: '',
       pass: '',
+      github_api: '',
     },
     vuetify: new Vuetify(),
     methods: {
       myClickHandler: function(e) {
 
         var auth = { 'user': this.pass }
-        var url = 'https://api.github.com/user'
+        var url = this.github_api 
+        if (url === '') {
+          url = 'https://api.github.com/user'
+        } 
         
         var headers = []
 				headers['Accept'] = 'application/vnd.github.inertia-preview+json';
-        
         var authdata = this.base64_encode(this.user + ':' + this.pass);
 				headers['Authorization'] = 'Basic ' + authdata;
+				
   			console.log('1 = ' + this.more_info)
+  			
   			$.ajaxSetup({
   				headers : headers
   			});
@@ -36,7 +39,7 @@ new Vue({
 
                     console.log('i am successful request!');
                     console.log(response)
-                    this.more_info = response;
+                    this.more_info = JSON.parse(response);
                 
                 }.bind(this)
   			});
@@ -97,6 +100,10 @@ new Vue({
       	    }
       
       	    return utftext;
-      	  }
+  	    },
+  	    temp_func: function () {
+  	      console.log('will i work? ' + this.more_info)
+  	      
+	      }, 
     }
 });
