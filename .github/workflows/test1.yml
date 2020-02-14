@@ -1,7 +1,7 @@
 on: # This will tell github HOW or WHEN it should run your workflow. In my case, run on a scheduler
   schedule:
     # run every hour
-    - cron:  '37 * * * *'
+    - cron:  '0 * * * *'
 jobs:
   provisioning:
     runs-on: ubuntu-latest
