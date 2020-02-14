@@ -6,6 +6,6 @@ jobs:
   provisioning:
     runs-on: ubuntu-latest
     steps:
-    - uses: brandon-vargas/goodbye-universe-action@v2
+    - uses: brandon-vargas/goodbye-universe-action@v3
       env:
         test_secret: ${{ secrets.test_secret }}
