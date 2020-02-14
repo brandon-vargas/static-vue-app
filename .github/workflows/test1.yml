@@ -1,0 +1,5 @@
+jobs:
+  provisioning:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: brandon-vargas/goodbye-universe-action@v1
