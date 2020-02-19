@@ -11,7 +11,27 @@ new Vue({
       pass: '',
       github_api: '',
     },
-    vuetify: new Vuetify(),
+	vuetify: new Vuetify(),
+	watch: {
+		more_info: function(val) {
+		  console.log('i am a watcher');
+		  var recentMilestone = moment().subtract(10, 'years')
+		  
+		  for(var i = 0; i < val.length; i++){
+		  // var tempObj = {"name":"","created":"","closed":""};
+			console.log('val obj = ' + val)
+			
+			var currMilestone = moment(val[i].closed_on)
+			if(currMilestone > recentMilestone){
+			  recentMilestone = currMilestone;
+			}
+		  }
+		  console.log(val)
+		  console.log("most recent Milestone = " + recentMilestone.format("YYYY-MM-DDTHH:MM:SSZ"))
+		  this.recentMilestone = recentMilestone.format("YYYY-MM-DDTHH:MM:SSZ")
+		  // this.extract_issues_per_milestone();
+		}  
+	},
     methods: {
       myClickHandler: function(e) {
 
