@@ -12,3 +12,5 @@ View the results of this Repo here: https://brandon-vargas.github.io/static-vue-
 
 ## Information
 • For more information of github's api, reference this link: https://developer.github.com/v3/
+
+
